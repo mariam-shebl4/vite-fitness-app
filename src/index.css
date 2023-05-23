@@ -1,0 +1,218 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(24, 3, 3, 0.87);
+  background-color: #ffffff;
+  --main-width:150px;
+  --margin-right:10px;
+  
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.nav{
+  z-index: 10;
+  background-color: #02052c;
+padding: 1rem 8rem;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.aside{
+    
+  background-color: #02052c;
+  height: 100%;
+      width: var(--main-width);
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+    margin-top: 75px;
+      overflow-x: hidden;
+      padding-top: 20px;
+}
+.top-left{
+  display: flex;
+  justify-content: space-between;
+  margin: 15px;
+}
+
+.close{
+  display:none;
+}
+.side-bar a{
+  display:flex;
+  text-decoration: none;
+  align-items: center;
+  margin: 40px;
+  color: rgb(255, 255, 255);
+  transition: ease-in-out .5s all;
+}
+
+.side-bar a:active{
+  color: rgb(196, 126, 6);
+}
+
+.side-bar a:last-child{
+  position: absolute;
+  bottom:5rem;
+  width:100%;
+}
+
+.side-bar a.active{
+  margin-left:20px;
+  background-color: bisque;
+}
+
+.side-bar a.active::before {
+  content: "";
+  width: 6px;
+  height: 24px;
+  background: blue;
+}
+
+
+.main {
+  margin-left:  var(--main-width);
+  margin-right: var(--margin-right);
+  /* Same as the width of the sidenav */
+ 
+  /* Increased text to enable scrolling */
+  padding: 20px 50px;
+  display: flex
+}
+
+.head{
+  font-size: 1.5rem;
+  text-align: center;
+  margin-left: 30rem;
+  color: #0c8752;
+}
+
+.button_submit {
+  min-width: 130px;
+  height: 40px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+  background: #0c8752;
+ z-index: 1;
+}
+.button_submit:hover:after {
+  width: 100%;
+  left: 0;
+}
+.button_submit:after {
+  border-radius: 5px;
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  z-index: -1;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+  transition: all 0.3s ease;
+  background-color: #3dc65d;
+  right: 0;
+}
+.button_submit:active {
+  top: 2px;
+}
+
+input{
+  padding: 10px;
+     font-size: 15px;
+     border-width: 0px;
+     border-color: #CCCCCC;
+     background-color: #FFFFFF;
+     color: #000000;
+     border-style: solid;
+     border-radius: 5px;
+     box-shadow: 0px 0px 2px rgba(46, 43, 43, 0.75);
+    
+}
+
+input:focus{
+  outline:none;
+}
+
+
+.delete-button {
+  min-width: 100px;
+  height: 40px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+  background: #d90429;
+ z-index: 1;
+}
+.delete-button:hover:after {
+  width: 100%;
+  left: 0;
+}
+.delete-button:after {
+  border-radius: 5px;
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  z-index: -1;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+  transition: all 0.3s ease;
+  background-color: #ef233c;
+  right: 0;
+}
+.delete-button:active {
+  top: 2px;
+}
+table.customTable {
+  margin-top: 2rem;
+  width: 164%;
+  background-color: #FFFFFF;
+  border-collapse: collapse;
+  border-width: 2px;
+  border-color: #0B2B1C;
+  border-style: solid;
+  color: #242424;
+}
+
+table.customTable td, table.customTable th {
+  border-width: 2px;
+  border-color: #02052c;
+  border-style: solid;
+  padding: 5px;
+}
+
+table.customTable thead {
+  background-color: #010869;
+  color: #FFFFFF;
+}
