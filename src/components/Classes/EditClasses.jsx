@@ -47,7 +47,7 @@ const EditClasses = () => {
   
       try {
         await axios.put(`https://64103182e1212d9cc92c334f.mockapi.io/api/gym/classes/${id}`, formData);
-        navigate(`/classes/${id}`);
+        navigate(`/class`);
       } catch (error) {
         console.error('Error updating classes:', error);
       }
