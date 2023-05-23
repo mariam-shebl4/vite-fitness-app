@@ -10,7 +10,7 @@ const SideNav = () => {
                 </div>
                 <div className="side-bar">
                   
-                    <Link to="/client">Clint</Link>
+                    <Link to="/">Clint</Link>
 
                     <Link to="/class">Class</Link>
                         

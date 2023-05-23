@@ -30,7 +30,7 @@ const AddClient = () => {
       }
       try {
         await axios.post('https://64103182e1212d9cc92c334f.mockapi.io/api/gym/clients', formData);
-        navigate('/client');
+        navigate('/');
       } catch (error) {
         console.error('Error adding client:', error);
       }

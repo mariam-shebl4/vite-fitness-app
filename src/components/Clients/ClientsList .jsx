@@ -26,10 +26,7 @@ const ClientsList = () => {
       console.error('Error deleting client:', error);
     }
   };
-  // const ClientDetailss = ({ clients }) => {
-  //   if (!clients) {
-  //     return <div>No data to show</div>;
-  //   }}
+
   return (
     <div>
     

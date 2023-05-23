@@ -24,7 +24,7 @@ const ClientDetails = () => {
     const deleteClient = async () => {
       try {
         await axios.delete(`https://64103182e1212d9cc92c334f.mockapi.io/api/gym/clients/${id}`);
-        navigate('/client');
+        navigate('/');
       } catch (error) {
         console.error('Error deleting client:', error);
       }
