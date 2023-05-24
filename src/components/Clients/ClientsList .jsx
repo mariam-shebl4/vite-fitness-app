@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-
+import Loader from "../../Loader";
 const ClientsList = () => {
   const [clients, setClients] = useState([]);
 
@@ -26,7 +26,7 @@ const ClientsList = () => {
       console.error('Error deleting client:', error);
     }
   };
-
+if(!clients.length) return<Loader/>
   return (
     <div>
     

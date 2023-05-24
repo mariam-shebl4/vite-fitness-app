@@ -47,7 +47,7 @@ const EditClient = () => {
   
       try {
         await axios.put(`https://64103182e1212d9cc92c334f.mockapi.io/api/gym/clients/${id}`, formData);
-        navigate(``);
+        navigate(`/`);
       } catch (error) {
         console.error('Error updating client:', error);
       }

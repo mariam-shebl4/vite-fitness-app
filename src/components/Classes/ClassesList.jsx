@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Loader from "../../Loader";
 
 const ClassesList = () => {
   const [classes, setClasses] = useState([]);
@@ -28,6 +29,7 @@ const ClassesList = () => {
       console.error('Error deleting classes:', error);
     }
   };
+  if(!classes.length) return<Loader/>
 
 
   return (
@@ -36,7 +38,7 @@ const ClassesList = () => {
     
 
       <Link to="/classes/add" className="head">Create Classes</Link>
-    {classes.length>1?(
+    
       <table className="customTable">
         <thead>
           <tr>
@@ -63,9 +65,7 @@ const ClassesList = () => {
           ))}
         </tbody>
       </table>
-    ):(
-      <h1>there is no data to show</h1>
-    )}
+    
       
     </div>
   );

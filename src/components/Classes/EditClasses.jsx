@@ -52,7 +52,8 @@ const EditClasses = () => {
         console.error('Error updating classes:', error);
       }
     };
-  
+    
+
     return (
       <div>
         <h2>Edit Classes</h2>
